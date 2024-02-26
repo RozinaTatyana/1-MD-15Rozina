@@ -1,0 +1,11 @@
+kol=0
+m=0
+while m<3:
+    sum = int(input("3+5="))
+    if sum == 8:
+        print("Правильно!")
+        kol+=1
+    else:
+        m+=1
+        print("Ответ неверный")
+print("Игра окончена. Правильных ответов:", kol)
