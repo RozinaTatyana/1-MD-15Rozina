@@ -1,0 +1,13 @@
+f=["ф"]
+kol=0
+while True:
+    a = input('введите слово: ')
+    if a == "стоп":
+        break
+    for i in a:
+        if i in f:
+            kol+=1
+    if kol>0:
+        print("Ого! Это редкое слово!")
+    else:
+        print("Эх, это не очень редкое слово...")
