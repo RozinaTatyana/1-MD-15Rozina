@@ -1,0 +1,6 @@
+n = int(input('введите кол-во слов: '))
+s=""
+for i in range(n):
+    a = input('введите слово: ')
+    s+= a + " "
+print(s)
