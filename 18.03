@@ -1,0 +1,52 @@
+
+def s(a):
+    if a%3==0:
+        print('да')
+    else:
+        print('нет')
+c = int(input('Ввелите число'))
+r=s(c)
+
+def s():
+    try:
+        a = float(input('Ввелите число'))
+        d=100/a
+        print(a)
+    except ValueError:
+        print("ошибка")
+    except ZeroDivisionError:
+        print("ошибка")
+s()
+
+
+def s(day, month, year):
+    i = day * month
+    v = year % 100
+    if i == v:
+        d = True
+    else:
+        d = False
+    return d
+
+
+day = int(input('Ввелите день'))
+month = int(input('Ввелите месяц'))
+year = int(input('Ввелите год'))
+r = s(day, month, year)
+print(r)
+
+
+def s(a):
+    r=len(a)//2
+    r1=0
+    r2=0
+    for i in range(r):
+        r1+=int(a[i])
+    for i in range(r,len(a)):
+        r2+=int(a[i])
+    if r1==r2:
+        return True
+    else:
+        return False
+h=input('Введите:')
+print(s(h))
