@@ -1,0 +1,37 @@
+a1 = input()
+a2 = input()
+if a1 == a2:
+    print('Пароль принят')
+else:
+    print('Пароль не принят')
+
+a = int(input('Ввод вагона: '))
+print()
+if a > 36:
+    print('боковое')
+else:
+  print('купе')
+if a % 2:
+    print('низ')
+else:
+    print('вверх.')
+
+a = int(input('Ввод года: '))
+print()
+if (a %4==0 and ( a%100)!=0) or a%400==0:
+    print('Год {} - високосный'.format(a))
+else:
+    print('Это год не високосный')
+
+a = input('введите цвет:')
+b = input('введите цвет:')
+if a != 'красный' and a !='желтый'and a !='синий':
+   print('ошибка цвета')
+elif b != 'красный'and b !='желтый' and b !='синий':
+   print('ошибка цвета')
+elif a == 'красный' and b == 'синий' or b == 'красный' and a == 'синий':
+    print('фиолетовый')
+elif a == 'красный' and b == 'желтый' or b == 'красный' and a == 'желтый':
+    print('оранжевый')
+elif a == 'синий' and b == 'желтый' or b == 'синий' and a == 'желтый':
+    print('зеленый')
