@@ -1,0 +1,46 @@
+def z1():
+        n = int(input('введите кол-во слов: '))
+    s=""
+    for i in range(n):
+        a = input('введите слово: ')
+        s+= a + " "
+    print(s)
+z1()
+def z2():
+    s = " "
+    while True:
+        a = input('введите слово: ')
+        if a == 'stop':
+            break
+        s+= a + " "
+    print(s)
+z2()
+def z3():
+    f=["ф"]
+    kol=0
+    while True:
+        a = input('введите слово: ')
+        if a == "стоп":
+            break
+        for i in a:
+            if i in f:
+                kol+=1
+        if kol>0:
+            print("Ого! Это редкое слово!")
+        else:
+            print("Эх, это не очень редкое слово...")
+z3()
+def z4():
+    kol=0
+    m=0
+    while m<3:
+        sum = int(input("3+5="))
+        if sum == 8:
+            print("Правильно!")
+            kol+=1
+        else:
+            m+=1
+            print("Ответ неверный")
+    print("Игра окончена. Правильных ответов:", kol)
+z4()
+
