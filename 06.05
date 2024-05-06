@@ -1,0 +1,26 @@
+def img_mirrow(img):
+    for i in img:
+        temp = Image.open(i)
+        temp.show()
+        sp = temp.filter(ImageFilter.SHARPEN)
+        sp.save('D:\\1-MD-15Rozina\\15.04\\{i+"0.jpg"}')
+        img_mirrow(['D:\\1-MD-15Rozina\\15.04\\0.jpg',
+                    'D:\\1-MD-15Rozina\\15.04\\2.jpg',
+                    'D:\\1-MD-15Rozina\\15.04\\3.jpg',
+                    'D:\\1-MD-15Rozina\\15.04\\4.jpg',
+                    'D:\\1-MD-15Rozina\\15.04\\5.jpg'])
+
+from PIL import Image
+def crop():
+    i= Image.open('D:\\1-MD-15Rozina\\29.04\\otkr.jpeg')
+    i.show()
+    i_1=i.crop((200,200,300,300))
+    i_1.save('D:\\1-MD-15Rozina\\29.04\\otkr1.jpeg')
+    i_1.show()
+crop()
+
+import csv
+with open('save.csv', newline='') as fp:
+    reader = csv.reader(fp)
+    for row in reader:
+        print(row)
