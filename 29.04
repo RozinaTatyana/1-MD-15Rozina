@@ -1,0 +1,22 @@
+from PIL import Image
+def crop():
+    i= Image.open('D:\\1-MD-15Rozina\\29.04\\otkr.jpeg')
+    i.show()
+    i_1=i.crop((200,200,300,300))
+    i_1.save('D:\\1-MD-15Rozina\\29.04\\otkr1.jpeg')
+    i_1.show()
+crop()
+
+def praz():
+    h={'нг': 'D:\\1-MD-15Rozina\\29.04\\NY.jpg', '8 MAPTA': 'D:\\1-MD-15Rozina\\29.04\\8M.jpg', '9MAYA': 'D:\\1-MD-15Rozina\\29.04\\9M.jpg'}
+    H_1= input('ПРАЗДНИК?')
+    if H_1 in h:
+        f = h[H_1]
+        if f:
+            i= Image.open(f)
+            i.show()
+        else:
+            print('error')
+    else:
+        print('нет такого праздника')
+praz()
