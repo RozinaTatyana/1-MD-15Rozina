@@ -1,0 +1,156 @@
+1111111111111111111111111111111111111111111111111111111111111
+def zad11():
+    class Restaurant:
+        def __init__(self, restaurant_name, cuisine_type, rating):
+            self.restaurant_name = restaurant_name
+            self.cuisine_type = cuisine_type
+            self.rating = rating
+    
+        def describe_restaurant(self):
+            print(f"Ресторан: {self.restaurant_name}")
+            print(f"Тип кухни: {self.cuisine_type}")
+            print(f"Рейтинг: {self.rating}")
+    
+        def open_restaurant(self):
+            print(f"Ресторан {self.restaurant_name} открыт!")
+    
+        def rating(self, new_rating):
+            if 0 <= new_rating <=5:
+              self.rating = new_rating
+              print(f"Рейтинг ресторана {self.restaurant_name} обновлен! Новый рейтинг: {self.rating}")
+            else:
+              print("Рейтинг должен быть в диапазоне от 0 до 5")
+    
+    restaurant1 = Restaurant("Cafe Piazza", "Итальянская", 4.2)
+    restaurant2 = Restaurant("Vinkeles", "Французская", 4.6)
+    restaurant3 = Restaurant("The Big Apple", "Американская", 3.8)
+    
+    restaurant1.describe_restaurant()
+    restaurant1.open_restaurant()
+    print()
+    restaurant2.describe_restaurant()
+    restaurant2.open_restaurant()
+    print()
+    restaurant3.describe_restaurant()
+    restaurant3.open_restaurant()
+    print()
+    restaurant1.rating(5.0)
+    restaurant1.describe_restaurant()
+zad11()
+
+class Restaurant:
+    def __init__(self, restaurant_name, cuisine_type, rating):
+        self.restaurant_name = restaurant_name
+        self.cuisine_type = cuisine_type
+        self.rating = rating
+
+    def describe_restaurant(self):
+        print(f"Ресторан {self.restaurant_name} специализируется на {self.cuisine_type} кухне Рейтинг: {self.rating}")
+
+    def open_restaurant(self):
+        print(f"Ресторан {self.restaurant_name} открыт!")
+
+    def rating(self, new_rating):
+        self.rating = new_rating
+        print(f"Рейтинг ресторана {self.restaurant_name} обновлен! Новый рейтинг: {self.rating}")
+newRestaurant = Restaurant("WineGogh", "голландская", 5)
+
+print(newRestaurant.restaurant_name)
+print(newRestaurant.cuisine_type)
+
+newRestaurant.describe_restaurant()
+newRestaurant.open_restaurant()
+newRestaurant.rating(4)
+
+
+
+restaurant1 = Restaurant("Italy", "итальянская")
+restaurant2 = Restaurant("le carré", "французская")
+restaurant3 = Restaurant("Якитория", "японская")
+
+restaurant1.describe_restaurant()
+restaurant2.describe_restaurant()
+restaurant3.describe_restaurant()
+
+100000000000000000000000000000000000000000000000
+
+import os
+import json
+def zad1():
+    with open("lab10.json", mode="r", encoding='utf8') as file:
+        rfile = json.load(file)
+        secondfile = (rfile['products'])
+        for i in range(3):
+            print("Название", secondfile[i]['name'])
+            print("Цена", secondfile[i]['price'])
+            print("Вес", secondfile[i]['weight'])
+            if secondfile[i]['available'] == True:
+                print("В наличии")
+            else:
+                print("Нет в наличии!")
+zad1()
+
+def zad2():	
+    import json
+    file = 'C:\\python_ proj\\список.JSON'
+
+    name = input ('Введите название продукта: ')
+    price = float(input( 'Введите цену продукта:
+    weight = float(input ('Введите вес продукта: '))
+    available = input ('Продукт доступен? (да/нет): '). strip(). lower() == 'да"
+    with open(file, 'r', encoding='utf-8') as file1:
+        load = json.load (file1)
+
+    n_p = {'name': name,
+           'price': price,
+           'weight': weight,
+           'available': available}
+    load ['products'].append(n_p)
+
+    with open(file, 'w', encoding='utf-8') as file1:
+        json.dump(load, file1, ensure_ascii=False, indent=4)
+    print('\nНовый список:')
+    for product in load ['products']:
+            print (f'Название: {product ["name"]}')
+            print (f'Цена: {product ["price"]}')
+            print(f'Bec: {product ["weight"]}')
+            if product[ 'available']:
+                print ("В наличии")
+            else:
+                print ('Нет в наличии.")
+            print()
+zad2()
+
+def zad3():
+    with open('C:\\python_proj\\en-ru.txt', 'r', encoding='utf-8') as file:
+        rows = file.readlines
+    ru_en = {}
+
+    for row in rows:
+        words = row.strip().split(' - ')
+        if len(words) == 2:
+            en = words[0]
+            ru_words = words[1].split(', ')
+            for word in ru_words:
+                ru_en[word] = en
+    sort = dict(sorted(ru_en.items()))
+    with open('C: \\python_proj\\ru-en.txt*, 'w', encoding='utf-8') as file:
+        for ru, en in sort.items():
+            file.write(f'{ru} - {en}\n')
+zad3()
+
+def num3():
+    dic = {}
+    with open("словарь.txt", mode="r", encoding='utf8') as file:
+        lines = file.read().splitlines()
+        for line in lines:
+            key, value = line.strip().split(' - ')
+            dic.update({key:value})
+    print(dic)
+
+    with open('ru-en.txt', 'w', encoding='utf-8') as f:
+        for ru_word, en_word in sorted(dic.items()):
+            f.write(f'{ru_word} - {en_word}\n')
+    print(dic)
+num3()
+
